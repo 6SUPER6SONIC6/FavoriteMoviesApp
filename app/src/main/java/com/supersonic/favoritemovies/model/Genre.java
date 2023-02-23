@@ -1,5 +1,6 @@
 package com.supersonic.favoritemovies.model;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.library.baseAdapters.BR;
@@ -44,5 +45,11 @@ public class Genre extends BaseObservable {
     public void setGenreName(String genreName) {
         this.genreName = genreName;
         notifyPropertyChanged(BR.genreName);
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.genreName;
     }
 }
